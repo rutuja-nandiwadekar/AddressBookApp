@@ -8,28 +8,17 @@ class Contact {
         this._id = id;
     }
 
-    get firstName() {
-        return this._firstName;
+   
+    get fullName() {
+        return this._fullName;
     }
 
-    set firstName(firstName) {
-        let firstNameRegex = RegExp('^[A-Z][a-z]{2,}$')
-        if (firstNameRegex.test(firstName))
-            this._firstName = firstName;
+    set fullName(fullName) {
+        let fullNameRegex = RegExp('^[A-Z][a-z]{2,}$')
+        if (fullNameRegex.test(fullName))
+            this._fullName = fullName;
         else
-            throw 'First Name Invalid'
-    }
-
-    get lastName() {
-        return this._lastName;
-    }
-
-    set lastName(lastName) {
-        let lastNameRegex = RegExp('^[A-Z][a-z]{2,}$')
-        if (lastNameRegex.test(lastName))
-            this._lastName = lastName;
-        else
-            throw 'Last Name Invalid'
+            throw 'full Name Invalid'
     }
 
     get address() {

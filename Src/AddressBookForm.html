@@ -135,12 +135,57 @@
 
 </body>
 <script>
-    /* UC 5 */
+
+    /* UC 8 */
+    let fullName;
+    function getFullName() {
+        fullName = this.value
+    }
+    let fullNameId = document.getElementById("name")
+    fullNameId.addEventListener("change", getFullName)
+
+    let city;
+    function getCityName() {
+        city = this.value
+    }
+    let cityId = document.getElementById("city")
+    cityId.addEventListener("change", getCityName)
+
+    let state;
+    function getStateName() {
+        state = this.value
+    }
+    let stateId = document.getElementById("state")
+    stateId.addEventListener("change", getStateName)
+
+    let zip;
+    function getZipName() {
+        zip = this.value
+    }
+    let zipId = document.getElementById("zip")
+    zipId.addEventListener("change", getZipName)
+
+    let phoneNumber;
+    function getPhoneNumber() {
+        phoneNumber = this.value
+    }
+    let phoneNumberId = document.getElementById("phone")
+    phoneNumberId.addEventListener("change", getPhoneNumber)
+
+
+
     function onSubmit() {
+        // localstorage
+        localStorage.setItem("fullName", fullName)
+        localStorage.setItem("city", city)
+        localStorage.setItem("state", state)
+        localStorage.setItem("zip", zip)
+        localStorage.setItem("phoneNumber", phoneNumber)
         alert("Added successfully!!!")
     }
+    /* UC 5 */
     let button = document.getElementById("submitButton")
-    button.addEventListener("click", onSubmit)
+    button.onclick = onSubmit;
 </script>
 
 </html>
