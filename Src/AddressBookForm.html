@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/Sytle/AddressBookForm.css" rel="stylesheet">
-    <script  src="/JS/AddressBookForm.js"></script>
+    <script src="/JS/AddressBookForm.js"></script>
     <script src="/JS/AddressBook.js"></script>
     <title> Address Book Form</title>
     <style>
@@ -35,6 +35,7 @@
                 </div>
             </div>
 
+            <!-- UC3 -->
             <div class="row-content">
                 <label class="label text" for="name">Full Name</label>
                 <div class="row-input">
@@ -122,13 +123,24 @@
                 <input class="input" type="text" name="Phone" id="phone" required>
                 <error-output class="phone-error" for="text"></error-output>
             </div>
+
+            <!-- UC5 -->
             <div class="submit-reset">
                 <button type="submit" class="button submitButton" id="submitButton">Add</button>
-                <button type="button" onclick="resetForm()" class="resetButton button">Reset</button>
+                <button type="reset" onclick="resetForm()" class="resetButton button">Reset</button>
             </div>
 
         </form>
     </div>
 
 </body>
+<script>
+    /* UC 5 */
+    function onSubmit() {
+        alert("Added successfully!!!")
+    }
+    let button = document.getElementById("submitButton")
+    button.addEventListener("click", onSubmit)
+</script>
+
 </html>
